@@ -13,5 +13,5 @@ do
 	paste ${CURRENT} ${TENSION}| awk '{sum+=$1*$2}END{print sum}' >> ${CONSUMPTION}
 	rm ${CURRENT} ${TENSION} ${BOTH}
 done
-cat ${CONSUMPTION} | awk '{sum+=$1}END{if (NR>0) print "Average power consumption = " sum / NR * 1.1327 + 0.6444 " W"}'
+cat ${CONSUMPTION} | awk '{sum+=$1}END{if (NR>0) print "Average power consumption = " sum / NR * 1.1451 + 0.5879 " W"}'
 rm ${CONSUMPTION}
