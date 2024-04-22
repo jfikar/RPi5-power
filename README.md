@@ -1,7 +1,7 @@
 # RPi5-power
 Simple script measuring the consumption of Raspberry Pi 5 in Watts
 
-The Raspberry Pi 5 comes with PMIC (power management integrated circuit) which gives you tensions and currents in 12 branches. It does not measure the total consumption, as there are apparently some branches not connected to PMIC (5V, so no consumption of USB devices or HATs). But we can estimate the power consumption of RPi5 by summing the consumption of the 12 branches.
+The Raspberry Pi 5 comes with PMIC (power management integrated circuit) which gives you tensions and currents in 12 branches. It does not measure the total consumption, as there are apparently some branches not connected to PMIC (5V, so no consumption of USB devices, HATs or NVMe). But we can estimate the power consumption of RPi5 by summing the consumption of the 12 branches.
 
 The command to read PMIC is
 
@@ -39,6 +39,6 @@ The last two lines are ignored for our purpose as it gives the input tension and
 
 As said before, the sum of the 12 branches is lower than the total consumption of the RPi5. But one can measure the real consumption of the RPi5 by a USB-C power-meter for different loads and then compare it to the output of the script.
 
-It looks like a simple linear correction is enough to get the real power consumption. According to my measurement it is real_consumption [W] = pmic_output [W] * 1.1327 + 0.6444
+It looks like a simple linear correction is enough to get the real power consumption. According to my measurement it is real_consumption [W] = pmic_output [W] * 1.1451 + 0.5879
 
 ![plot](plot.png)
