@@ -42,3 +42,7 @@ As said before, the sum of the 12 branches is lower than the total consumption o
 It looks like a simple linear correction is enough to get the real power consumption. According to my measurement it is real_consumption [W] = pmic_output [W] * 1.1451 + 0.5879
 
 ![plot](plot.png)
+
+## Related tools
+
+- [Raspberry Pi Electricity Cost Calculator](https://raspberry.tips/en/raspberry-pi-power-cost-calculator-what-does-your-pi-really-cost) — estimate monthly running costs based on the wattage values measured with this script
