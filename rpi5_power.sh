@@ -1,4 +1,5 @@
 #!/bin/sh
+set -eu
 SECONDS=50
 BOTH=$(mktemp)
 CURRENT=$(mktemp)
